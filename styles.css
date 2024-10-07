@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-size: 16px;
+}
+
+.cv-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease;
+}
+
+.cv-container:hover {
+    transform: translateY(-10px);
+}
+
+.left-column {
+    background: linear-gradient(135deg, #2a2a72, #009ffd);
+    color: white;
+    padding: 50px 20px;
+    width: 35%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-column::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: rotate 15s infinite linear;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.profile-picture img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-picture img:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.contact-info, .skills, .languages, .hobbies {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 5px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+h2:hover {
+    color: #ffd700;
+}
+
+.skills ul, .languages ul, .hobbies ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills ul li, .languages ul li, .hobbies ul li {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.skills ul li:hover, .languages ul li:hover, .hobbies ul li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.right-column {
+    padding: 50px;
+    width: 65%;
+}
+
+.right-column h2 {
+    color: #2a2a72;
+    font-size: 26px;
+    margin-bottom: 15px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.right-column h2::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: #ff6b6b;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-radius: 2px;
+}
+
+.right-column h2:hover {
+    color: #ff6b6b;
+}
+
+.right-column p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.right-column p:hover {
+    color: #000;
+}
+
+.profile, .education, .experience {
+    margin-bottom: 30px;
+}
+
+.profile p, .education p, .experience p {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile p:hover, .education p:hover, .experience p:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.experience p strong {
+    color: #2a2a72;
+}
+
+.experience p {
+    position: relative;
+}
+
+.experience p::before {
+    content: "●";
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    color: #ff6b6b;
+    font-size: 20px;
+}
+
